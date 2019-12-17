@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyProductScreenController">
+   <children>
+      <Label layoutX="92.0" layoutY="47.0" text="Modify Product">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="63.0" layoutY="128.0" prefHeight="345.0" prefWidth="313.0">
+         <children>
+            <GridPane prefHeight="346.0" prefWidth="261.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="54.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="79.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="46.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="82.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Name" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Inv" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Price" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Max" GridPane.rowIndex="4">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="51.0" text="Min" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="idTextFieldModifyProductScreen" disable="true" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="nameTextFieldModifyProductScreen" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="invTextFieldModifyProductScreen" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="priceTextFieldModifyProductScreen" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="maxTextFieldModifyProductScreen" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="minNumTextFieldModifyProductScreen" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Button fx:id="searchBtnModifyPartScreen" layoutX="573.0" layoutY="42.0" mnemonicParsing="false" onAction="#searchHandler" text="Search" textFill="#09a173" />
+      <TextField fx:id="searchTextFieldModifyProductScreen" layoutX="674.0" layoutY="42.0" />
+      <Button fx:id="addBtnModifyProductScreen" layoutX="799.0" layoutY="287.0" mnemonicParsing="false" onAction="#addHandler" text="Add" textFill="#163fd9" />
+      <Button fx:id="deleteBtnModifyProductScreen" layoutX="783.0" layoutY="521.0" mnemonicParsing="false" onAction="#deleteHandler" text="Delete" textFill="#1b1919" />
+      <Button fx:id="cancelBtnModifyProductScreen" layoutX="783.0" layoutY="559.0" mnemonicParsing="false" onAction="#cancelHandler" text="Cancel" textFill="#dd900a" />
+      <Button fx:id="saveBtnModifyProductScreen" layoutX="678.0" layoutY="559.0" mnemonicParsing="false" onAction="#saveHandler" text="Save" textFill="#058364" />
+      <TableView fx:id="productScreenUpperTblView" layoutX="486.0" layoutY="89.0" prefHeight="175.0" prefWidth="355.0">
+        <columns>
+          <TableColumn fx:id="uPartId" prefWidth="67.0" text="Part ID" />
+          <TableColumn fx:id="uPartName" prefWidth="78.0" text="Part Name" />
+            <TableColumn fx:id="uInv" prefWidth="108.0" text="Inventory Level" />
+            <TableColumn fx:id="uPricePer" prefWidth="101.0" text="Price per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="productScreenLowerTblView" layoutX="486.0" layoutY="322.0" prefHeight="175.0" prefWidth="355.0">
+         <columns>
+            <TableColumn fx:id="lPartId" prefWidth="64.0" text="Part ID" />
+            <TableColumn fx:id="lPartName" prefWidth="86.0" text="Part Name" />
+            <TableColumn fx:id="lInv" prefWidth="103.0" text="Inventory Level" />
+            <TableColumn fx:id="lPricePer" prefWidth="101.0" text="Price per Unit" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
